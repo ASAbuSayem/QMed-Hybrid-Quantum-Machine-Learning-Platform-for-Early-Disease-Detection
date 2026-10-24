@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="QMed banner" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A0F1E,50:16255C,100:00897B&height=230&section=header&text=QMed&fontSize=78&fontColor=FFFFFF&fontAlignY=36&desc=Hybrid%20Quantum%20Machine%20Learning%20for%20Early%20Disease%20Detection&descSize=20&descAlignY=57&descColor=BFE7EF&animation=fadeIn" alt="QMed - Hybrid Quantum Machine Learning for Early Disease Detection" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=900&color=22A7C2&center=true&vCenter=true&width=720&lines=Quantum+kernels+%C2%B7+Variational+circuits+%C2%B7+Hybrid+QNN;Leak-free+benchmarking+on+real+medical+data;5+datasets+%C2%B7+4+qubits+%C2%B7+nested+tuning+%C2%B7+paired+statistics" alt="Quantum kernels, variational circuits, leak-free benchmarking">
 </p>
 
 <p align="center">
@@ -40,10 +44,6 @@ The platform also studies *why* quantum kernels behave the way they do — throu
 
 ## How the platform works
 
-<p align="center">
-  <img src="assets/pipeline.png" alt="QMed study design and leak-free pipeline" width="95%">
-</p>
-
 1. **Data** — five public medical datasets. Ultrasound images are turned into 512 features by a frozen ImageNet-pretrained ResNet-18 that never sees the labels.
 2. **Leak-free preprocessing** — imputation → one-hot encoding and standardisation → ANOVA *F* feature selection (*k* = 10) → PCA to 4 components → min–max scaling to rotation angles [0, α] → SMOTE. All of it is refitted inside the training part of every fold.
 3. **Models** — quantum and classical models receive exactly the same four inputs.
@@ -52,10 +52,6 @@ The platform also studies *why* quantum kernels behave the way they do — throu
 6. **Mechanism and validity** — bandwidth sweep, kernel spectrum, geometric difference, noise simulation, learning curves, permutation tests and a leakage demonstration.
 
 ### Quantum feature maps
-
-<p align="center">
-  <img src="assets/feature_maps.png" alt="Angle encoding and ZZ feature map circuits" width="90%">
-</p>
 
 The **angle encoding** applies one *R<sub>Y</sub>* rotation per qubit and gives a product state whose kernel can be written in closed form — a built-in classical control. The **ZZ feature map** adds Hadamard layers and nearest-neighbour entangling blocks, repeated twice, and is the main quantum model. The fidelity kernel *K*(*x*, *x′*) = |⟨φ(*x*)|φ(*x′*)⟩|² feeds a support vector machine.
 
@@ -86,3 +82,7 @@ All datasets are public (UCI Machine Learning Repository, OpenML and MedMNIST).
 ---
 
 <p align="center"><sub>Built with PennyLane, scikit-learn and PyTorch · Results will be added after publication</sub></p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00897B,50:16255C,100:0A0F1E&height=110&section=footer" alt="" width="100%">
+</p>
